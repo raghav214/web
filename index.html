@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+h1 {
+  text-align: center;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+</head>
+<script src="my.js"></script>
+
+<body>
+<h1>Find Vaccination Slot</h1>
+<div id='div1'></div>
+
+<form id="myForm">
+    <div class="form-group row">
+        <div class="col-3">
+            <label for="departmentsDropdown"><b>States</b></label>
+            <select class="form-control" id="departmentsDropdown"  name="departmentsDropdown"></select>
+        </div>
+        <div class="col-3">
+            <label for="desctDropdown"><b>District</b></label>
+            <select class="form-control"  id="desctDropdown" name="desctDropdown">
+        </div>
+        <div class="col-2">
+            <label for="dateDropdown"><b>Date</b></label>
+            <select class="form-control"  id="dateDropdown" name="dateDropdown"></select>
+        </div>
+        <div class="col-2">
+            <label for="ageDropdown"><b>Age</b></label>
+            <select class="form-control"  id="ageDropdown" name="ageDropdown">
+                <option value="18">18-44</option>
+                <option value="30">30</option>
+                <option value="45">45+</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <label for="feeType"><b>Fee</b></label>
+            <select class="form-control"  id="feeType" name="feeType">
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <label for="test"><b></b> </label>
+        <input type="button" class="form-control btn btn-primary" id="test" value="Start Auto Refresh"/>
+    </div>
+
+</form>
+
+<table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Vaccine</th>
+        <th>Available</th>
+        <th>Age</th>
+        <th>Date</th>
+        <th>Fee Type</th>
+        <th>Pin</th>
+
+    </tr>
+    </thead>
+</table>
+</body>
+</html>
